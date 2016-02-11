@@ -32,6 +32,7 @@ $ php artisan vendor:publish --provider="Mixdinternet\Cities\Providers\CitiesSer
 ## Criando e alimentando as tabelas
 
 ```
+$ composer dump-autoload
 $ php artisan migrate
 $ php artisan db:seed --class="StateTableSeeder"
 $ php artisan db:seed --class="CityTableSeeder"
