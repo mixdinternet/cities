@@ -1,6 +1,6 @@
 {
     "name": "mixdinternet/cities",
-    "description": "Pacote com os estados, cidade e bairros do Brasil",
+    "description": "Pacote com os estados, cidades e bairros do Brasil",
     "keywords": ["laravel", "estados", "cidades", "bairros"],
     "license": "MIT",
     "authors": [
@@ -12,6 +12,8 @@
         }
     ],
     "require": {
+        "php": ">=5.5.9",
+        "laravel/framework": "5.1.*"
     },
     "autoload": {
         "psr-4": {
