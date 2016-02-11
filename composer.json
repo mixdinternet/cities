@@ -1,0 +1,21 @@
+{
+    "name": "mixdinternet/cities",
+    "description": "Pacote com os estados, cidade e bairros do Brasil",
+    "keywords": ["laravel", "estados", "cidades", "bairros"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Irineu Martins Junior",
+            "email": "irineu@mixd.com.br",
+            "homepage": "http://www.mixd.com.br/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Mixdinternet\\Cities\\": "src/"
+        }
+    }
+}
