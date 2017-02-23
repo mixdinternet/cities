@@ -15,8 +15,8 @@ class CreateNeighborhoodsTable extends Migration
         Schema::create('neighborhoods', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('city_id')->unsigned()->index();
-            $table->string('name', 100);
-            $table->string('slug', 40);
+            $table->string('name');
+            $table->string('slug');
             $table->integer('order')->default(0);
 
             $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
