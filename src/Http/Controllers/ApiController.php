@@ -22,8 +22,12 @@ class ApiController extends Controller
         });
     }
 
-    public function cities($id)
+    public function cities($id = null)
     {
+
+        if (!$id) {
+            return [];
+        }
 
         return Cache::get('api.cities.' . $id, function() use ($id) {
             $val = City::where('state_id', $id)->orderBy('order', 'desc')->orderBy('name', 'asc')->get()->pluck('id', 'name');
@@ -32,8 +36,12 @@ class ApiController extends Controller
         });
     }
 
-    public function neighborhoods($id)
+    public function neighborhoods($id = null)
     {
+
+        if (!$id) {
+            return [];
+        }
 
         return Cache::get('api.neighborhoods.' . $id, function() use ($id) {
             $val = Neighborhood::where('city_id', $id)->orderBy('order', 'desc')->orderBy('name', 'asc')->get()->pluck('id', 'name');
