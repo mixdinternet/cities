@@ -3,12 +3,17 @@
 namespace Mixdinternet\Cities;
 
 use Illuminate\Database\Eloquent\Model;
+use SimpleSoftwareIO\Cache\Cacheable;
 
 class City extends Model
 {
+    use Cacheable;
+
     public $timestamps = false;
 
-    protected $fillable = ['id', 'state_id', 'name', 'slug'];
+    protected $fillable = [
+        'id', 'state_id', 'name', 'slug'
+    ];
 
     public function state()
     {
